@@ -26,42 +26,42 @@
 
     <h2>A Pitch for Non-cooperative Games</h2>
     <p>
-      Positive feedback loops are essential to superintelligence, and non-cooperative games can produce one of the strongest intelligence-amplifying positive feedback loop when
-      (1) they have enough "intelligence pressure" upon players and (2) the players learn.
+      Positive feedback loops are essential to superintelligence, and non-cooperative games can produce one of the strongest intelligence-amplifying positive feedback loops when
+      (1) they exert "intelligence pressure" on players and (2) the players learn.
     </p>
     <p>
-      I believe we've already seen the early signs of potential from <a href="">GANs </a>and <a href="https://arxiv.org/abs/1712.01815">self-play</a>.
-      But fundamental questions remain open: how and when would multiple neural networks converge to their (local) equilibrium, and what'd be the nature of such equilibrium?
+      I believe we've already seen early signs of this potential in <a href="">GANs </a>and <a href="https://arxiv.org/abs/1712.01815">self-play</a>.
+      But fundamental questions remain open: how and when do multiple neural networks converge to their (local) equilibrium, and what is the nature of such an equilibrium?
     </p>
 
     <h2>R1: Stochastic Gradient Methods in Smooth Games</h2>
     <p>
-      In smooth games, each player trys to optimize its smooth objective with gradients for its own sake.
+      In smooth games, each player tries to optimize its own smooth objective using gradients.
       The challenge is that <a href="https://arxiv.org/abs/1709.02738">competing objectives often induce non-convergent cycles</a>.
-      In fact, <a href="https://dl.acm.org/doi/10.1145/3406325.3451125?__cf_chl_f_tk=ypf3BKMSyBnuYal8HnHCmxuS2MVDAqo9hmOxa_TE3VQ-1782840156-1.0.1.1-8.UZGFnXUVJQDogV7OdDydBarnd3NB4GUGd5Us3Aiik">both Nash equilbria and</a> <a href="https://arxiv.org/abs/2606.17000">stationary points are computationally intractable in general</a>. 
-      So the theory typically splits into two categories: local analysis under general setup and global analysis under structural assumptions.
-      My first <a href="https://proceedings.mlr.press/v151/ha22a">AISTATS 2022</a> paper studies the former and my recent <a href="https://github.com/kuc2477/colt2026-nonconvex-sgda/blob/main/ha26.pdf">COLT 2026</a> paper studies the latter. 
-      I'm working on a follow-up paper towards answering a more fundamental question: "what's the weakest computationally tractable structure for smooth games?"
+      In fact, <a href="https://dl.acm.org/doi/10.1145/3406325.3451125?__cf_chl_f_tk=ypf3BKMSyBnuYal8HnHCmxuS2MVDAqo9hmOxa_TE3VQ-1782840156-1.0.1.1-8.UZGFnXUVJQDogV7OdDydBarnd3NB4GUGd5Us3Aiik">both Nash equilibria and</a> <a href="https://arxiv.org/abs/2606.17000">stationary points are computationally intractable in general</a>.
+      So the theory typically splits into two categories: local analysis under a general setup and global analysis under structural assumptions.
+      My first <a href="https://proceedings.mlr.press/v151/ha22a">AISTATS 2022</a> paper studies the former and my recent <a href="https://github.com/kuc2477/colt2026-nonconvex-sgda/blob/main/ha26.pdf">COLT 2026</a> paper studies the latter.
+      I'm working on a follow-up paper toward answering a more fundamental question: "what's the weakest computationally tractable structure for smooth games?"
     </p>
 
     <h2>R2: Independent Learning Methods in Markov Games</h2>
     <p>
-      In real-world applications, we seldom enjoy gradient feedbacks, and we only get an access to stochastic rewards of each player.
-      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1063912/">Markov games</a> naturally extend to this setting, and <a href="https://arxiv.org/abs/2111.11743">independent learning</a> is the most straightforward way to learn in Markov games.
+      In real-world applications, we seldom enjoy gradient feedback, and we often only have access to stochastic rewards for each player.
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1063912/">Markov games</a> naturally model this setting, and <a href="https://arxiv.org/abs/2111.11743">independent learning</a> is the most straightforward way to learn in Markov games.
       <a href="https://arxiv.org/abs/2102.04540">Classical zero-sum Markov games are now relatively well-established.</a>
       But Markov games with general-sum, function approximation, and <a href="https://arxiv.org/abs/2410.16600">non-additive rewards</a> are still in their infancy.
-      Paralleling my work on smooth games, I'm planning to study the following question: "what's the weakest tractable structure for Markov games?".
+      Paralleling my work on smooth games, I'm planning to study the following question: "what's the weakest tractable structure for Markov games?"
     </p>
 
     <h2>R3: Implicit Equilibrium Selection Bias in Games</h2>
     <p>
       In the world of minimization, deep learning now has (at least) a partially satisfactory explanation: neural nets exhibit multiple solutions, but <a href="https://arxiv.org/abs/2106.06530">stochastic gradient methods prefer particularly desirable ones</a>.
-      I believe an analogous explanation would be crucial for games, and I'm working on the question: "given a continuum of (local) equilibria or limit cycles, which one would stochastic gradient methods prefer?".
+      I believe an analogous explanation would be crucial for games, and I'm working on the question: "given a continuum of (local) equilibria or limit cycles, which one do stochastic gradient methods prefer?"
     </p>
 
     <h2>I'm Looking for a Ph.D. Opportunity for Fall 2027</h2>
     <p>
-      I'm actively looking for a Ph.D. opportunity in the intersection of non-cooperative games and deep learning.
+      I'm actively looking for a Ph.D. opportunity at the intersection of non-cooperative games and deep learning.
       I'd be happy to discuss research with anyone interested.
       Please feel free to reach out to me via email: <a href="mailto:junsoo.ha.contact@gmail.com" rel="made" class="id">junsoo.ha.contact@gmail.com</a>
     </p>
