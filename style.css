@@ -36,10 +36,16 @@ font-size: smaller; }
 .discord-username { font-family: monospace; }
 .discord-username span { font-family: inherit; color: gray; }
 .pgp-key span { font-family: inherit; color: inherit; margin-right: 0.5em; }
+.name-row {
+  display: flex;
+  align-items: center;
+  column-gap: 0.80em;
+  margin: 0px 0 30px -7px;
+}
 h1 { font-family: 'Spoqa Han Sans JP', sans-serif;
   font-size: 15px;
   font-weight: 200;
-margin: -20px 0 30px -7px; transition: margin 0.5s; }
+margin: -20px 0 30px -7px; padding-top: 0.0em; transition: margin 0.5s; }
 h1 ruby, h1 rb { font: inherit; }
 h1 rb { font-size: 54px; }
 h1 rt {
@@ -63,6 +69,23 @@ h1.transformed rb, h1.transformed rt {
   margin-bottom: 0;
 }
 h1.transformed rt { text-align: center; }
+.name-row h1,
+.name-row h1.transformed,
+.name-row h1:hover,
+.name-row h1.transformed:hover {
+  margin: 0;
+}
+.thesis-label {
+  font-family: 'Spoqa Han Sans JP', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  padding-top: 1.0em;
+  padding-left: 0.5em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
 body > p:first-of-type { margin-top: 0; }
 a[hreflang]:after {
   color: gray;
