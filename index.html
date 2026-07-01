@@ -27,37 +27,37 @@
 
     <h2>A Pitch for Non-Cooperative Games</h2>
     <p>
-      Positive feedback loops will be essential for superintelligence, and non-cooperative games produce one of the strongest intelligence-amplifying feedback loop when they
-      (1) exert strong "intelligence pressure" on players and (2) the players learn efficiently.
+      Positive feedback loops will be essential for superintelligence, and non-cooperative games can produce one of the strongest intelligence-amplifying feedback loop when they
+      (1) exert strong "intelligence pressure" on players and (2) the players learn.
     </p>
     <p>
-      I believe we have already seen the early signs of this potential in <a href="">GANs </a>and <a href="https://arxiv.org/abs/1712.01815">self-play</a>.
+      I believe we've already seen the early signs of this potential in <a href="">GANs </a>and <a href="https://arxiv.org/abs/1712.01815">self-play</a>.
       However, fundamental questions remain largely open: how and when multiple neural nets would actually converge to their equilibrium, and what'd be the precise nature of such an equilibrium.
     </p>
 
-    <h2>R1: Minimal Structure for Tractable Smooth Games</h2>
+    <h2>R1: Minimal Structure of Tractable Smooth Games</h2>
     <p>
-      In smooth games, each player optimizes its own objective with gradients.
+      In smooth games, each player optimizes its own objective using gradients.
       The challenge is that <a href="https://arxiv.org/abs/1709.02738">competing objectives often induce non-convergent cycles</a>.
       In fact, <a href="https://dl.acm.org/doi/10.1145/3406325.3451125?__cf_chl_f_tk=ypf3BKMSyBnuYal8HnHCmxuS2MVDAqo9hmOxa_TE3VQ-1782840156-1.0.1.1-8.UZGFnXUVJQDogV7OdDydBarnd3NB4GUGd5Us3Aiik">Nash equilibria and</a> <a href="https://arxiv.org/abs/2606.17000">stationary points are computationally intractable</a> in general.
-      So the theory typically splits into two distinct categories: local analysis under general setup and global analysis under structural assumptions on games.
-      My first <a href="https://proceedings.mlr.press/v151/ha22a">AISTATS 2022</a> paper studied the former and my latest <a href="https://proceedings.mlr.press/v336/ha26a.html">COLT 2026</a> paper studied the latter.
-      Now I'm working on a a more fundamental question: "what'd be the minimal structure for tractable smooth games?".
+      So theory typically splits into two distinct categories: local analysis under general setup and global analysis under structural assumptions.
+      My <a href="https://proceedings.mlr.press/v151/ha22a">AISTATS 2022</a> paper studied the former and my latest <a href="https://proceedings.mlr.press/v336/ha26a.html">COLT 2026</a> paper studied the latter.
+      Now I'm working on a a fundamental question: "what'd be the minimal structure of tractable smooth games?".
     </p>
 
-    <h2>R2: Minimal Structure for Tractable Markov Games</h2>
+    <h2>R2: Minimal Structure of Tractable Markov Games</h2>
     <p>
       In real-world applications, we seldom enjoy gradient feedback, and we only have access to stochastic rewards.
-      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1063912/">Markov games</a> naturally model this setting, and
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1063912/">Markov games</a> naturally extend to this setting, and
       <a href="https://arxiv.org/abs/2102.04540">classical zero-sum Markov games are now relatively well-established.</a>
       However, Markov games with general-sum, function approximation, and <a href="https://arxiv.org/abs/2410.16600">non-additive rewards</a> are still in their infancy.
-      Paralleling R1 on smooth games, I'm intrigued by the following fundamental question: "what'd be the minimal structure for tractable Markov games?".
+      I'm intrigued by the question: "what'd be the minimal structure of tractable Markov games?".
     </p>
 
     <h2>R3: Implicit Equilibrium Selection Bias in Games</h2>
     <p>
-      In the world of minimization, deep learning now has (at least) a partially satisfactory explanation: neural nets exhibit multiple solutions, but <a href="https://arxiv.org/abs/2106.06530">stochastic gradient methods prefer particularly desirable ones</a>.
-      I believe an analogous theoretic explanation would be crucial for games as well. 
+      In the world of minimization, deep learning now has a plausible hypothetical explanation: neural nets admit multiple solutions, but <a href="https://arxiv.org/abs/2208.12591">stochastic gradient methods prefer particularly desirable ones</a>.
+      I believe an analogous explanation would be crucial to understand games. 
       I'm working on the question: "given a continuum of equilibria or limit cycles, which one would stochastic gradient dynamics prefer?"
     </p>
 
