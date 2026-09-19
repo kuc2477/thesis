@@ -25,45 +25,60 @@
     </div>
 
 
-    <h2>A Pitch for Non-Cooperative Games</h2>
+    <h2>A Pitch for Learning in Games</h2>
     <p>
-      Positive feedback loops will become essential for superintelligence, and non-cooperative games can produce one of the strongest intelligence-amplifying feedback loop when they
-      (1) exert "intelligence pressure" on players and (2) the players learn.
+      Self-reinforcing feedback loops will become a cornerstone of superintelligence.
+      Games offer key principles that could build such loops: competition and cooperation.
+      In (non-cooperative) games, progress in one player creates new challenges, and hence, learning signals for others.
+      From <a href="https://arxiv.org/abs/1406.2661">GANs</a>, <a href="https://arxiv.org/abs/1712.01815">AlphaZero</a>, and <a href="https://openai.com/index/navier-stokes-solution/">thousands of agents collaborating on a Millennium Prize Problem</a>, we've seen a potential of this principle.
     </p>
     <p>
-      I believe we've already seen the early signs of this potential in <a href="">GANs </a>and <a href="https://arxiv.org/abs/1712.01815">self-play</a>.
-      However, fundamental questions remain largely open: how and when multiple neural nets would actually converge to their equilibrium, and what'd be the precise nature of such an equilibrium?
-    </p>
-
-    <h2>R1: Minimal Structure of Tractable Smooth Games</h2>
-    <p>
-      In smooth games, each player optimizes its own objective using gradients.
-      The challenge is that <a href="https://arxiv.org/abs/1709.02738">competing objectives often induce non-convergent cycles</a>.
-      In fact, <a href="https://dl.acm.org/doi/10.1145/3406325.3451125?__cf_chl_f_tk=ypf3BKMSyBnuYal8HnHCmxuS2MVDAqo9hmOxa_TE3VQ-1782840156-1.0.1.1-8.UZGFnXUVJQDogV7OdDydBarnd3NB4GUGd5Us3Aiik">Nash equilibria and</a> <a href="https://arxiv.org/abs/2606.17000">stationary points are computationally intractable</a> in general.
-      So the theory typically splits into two distinct categories: local analysis under general setup and global analysis under structural assumptions.
-      My <a href="https://proceedings.mlr.press/v151/ha22a">AISTATS 2022</a> paper studied the former and my latest <a href="https://proceedings.mlr.press/v336/ha26a.html">COLT 2026</a> paper studies the latter.
-      Now I'm working on a a fundamental question: "what'd be the minimal structure of tractable smooth games?".
+      However, games are notoriously difficult to solve; therefore, scaling multi-agent learning will require more than scaling experiments.
+      In particular, they often exhibit <a href="https://arxiv.org/abs/1709.02738">limit cycles</a>, <a href="">chaotic behaviors</a>, and <a href="https://doi.org/10.1137/070699652">intractable equilibria</a>.
+      Such extreme pathologies call for a theory that identifies a necessary structure for efficient learning.
     </p>
 
-    <h2>R2: Minimal Structure of Tractable Markov Games</h2>
     <p>
-      In real-world applications, we seldom enjoy gradient feedback, and we only have access to stochastic rewards.
-      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1063912/">Markov games</a> naturally extend to this setting, and
-      <a href="https://arxiv.org/abs/2102.04540">classical zero-sum Markov games are now relatively well-established.</a>
-      However, Markov games with general-sum, function approximation, and <a href="https://arxiv.org/abs/2410.16600">non-additive rewards</a> are still in their infancy.
-      I'm intrigued by the question: "what'd be the minimal structure of tractable Markov games?".
+      As theoretical physics guided the discovery of Higgs boson, black holes, and gravitational waves, a predictive theory of games between multiple neural nets will reduce the cost of experiments by orders of magnitude.
+      With mathematical superintelligence now in the hands of theorists, I believe this theory is coming within reach.
     </p>
 
-    <h2>R3: Implicit Equilibrium Selection Bias in Games</h2>
+    <h2>R1: Fundamental Algorithmic Game Theory</h2>
+    <p class="research-question"><b class="quotation-mark">&ldquo;</b><em>
+      When can simple learning rules solve games efficiently?
+    </em><b class="quotation-mark">&rdquo;</b></p>
     <p>
-      In the world of minimization, deep learning now has a plausible hypothetical explanation: neural nets admit multiple solutions, but <a href="https://arxiv.org/abs/2208.12591">stochastic gradient methods prefer particularly desirable ones</a>.
-      I believe an analogous explanation would be crucial for games as well. 
-      I'm working on the question: "given a continuum of equilibria or limit cycles, which one would stochastic gradient dynamics prefer?"
+      A single basic question lies at the foundation of multi-agent learning: what makes a class of games computationally tractable, and what makes it intrinsically hard?
+      Answering the question requires us to understand the obstacles that algorithms can overcome, and obstacles that require additional structures.
+      Recent advances in <a href="https://arxiv.org/abs/2503.24340">self-play acceleration</a> and <a href="https://arxiv.org/abs/2110.14555">decentralized learning in Markov games</a> reveal how different types of interaction and game structures can enable efficient learning.
+      Nevertheless, identifying a minimal structure for nonconvex games, understanding self-play acceleration under different types of feedbacks, and determining (sub)optimality of simple first-order methods, still remain open.
+    </p>
+
+    <h2>R2: Game Theory for Neural Networks</h2>
+    <p class="research-question"><b class="quotation-mark">&ldquo;</b><em>
+      When would games induce sample-efficient learning dynamics for neural nets?
+    </em><b class="quotation-mark">&rdquo;</b></p>
+    <p>
+      Interaction between multiple neural nets could make useful features easier to learn.
+      Recent theory explains how <a href="https://arxiv.org/abs/2302.11055">useful features can be discovered sequentially</a>, and under suitable conditions, <a href="https://arxiv.org/abs/2511.15120">learned efficiently in multi-index models</a>.
+      These results identify the structures that enable efficient feature learning, but whether dynamic interactions between multiple neural nets could create such structures, has been unexplored.
+      For instance, whether collaboration could induce sample-efficient feature learning, and whether competition could induce efficient curricula, remain intriguing open problems.
+    </p>
+
+    <h2>R3: Game Theory for Alignment and Safety</h2>
+    <p class="research-question"><b class="quotation-mark">&ldquo;</b><em>
+      When can non-cooperative games provably guarantee alignment and monitorability?
+    </em><b class="quotation-mark">&rdquo;</b></p>
+    <p>
+      Carefully designed non-cooperative games between multiple neural networks could provide alignment guarantees without expecting every participants to be trustworthy.
+      The goal is to identify incentives and information structures under which every equilibrium would satisfy a human-alignment, a pluralistic-alignment, or a guarantee that misbehaviors would remain detectable through CoT monitoring.
+      <a href="https://arxiv.org/abs/1805.00899">AI safety via debate</a> motivates this approach, while <a href="https://arxiv.org/abs/2503.11926">the emergence of concealed misbehavior under CoT optimization</a> shows why oversight incentives require careful design.
+      Establishing provable guarantees under imperfect feedback, conflicting human preferences, and determining whether learning dynamics could actually reach a meaningful equilibrium, remain intriguing open problems.
     </p>
 
     <h2>I'm Looking for a Ph.D. Opportunity for Fall 2027</h2>
     <p>
-      I'm actively looking for a Ph.D. opportunity at the intersection of non-cooperative games and deep learning.
+      I'm actively looking for a Ph.D. opportunity at the intersection of (non-cooperative) games and deep learning.
       I'd be happy to discuss research with anyone interested.
       Please feel free to reach out to me via email: <a href="mailto:junsoo.ha.contact@gmail.com" rel="made" class="id">junsoo.ha.contact@gmail.com</a>
     </p>
